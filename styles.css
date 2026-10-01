@@ -174,9 +174,10 @@ code { padding: 2px 6px; color: var(--blue-deep); border-radius: 5px; background
 .page-hero-badge b { font-family: "Space Grotesk", sans-serif; font-size: 37px; line-height: 1.05; }
 .page-hero-badge small { color: rgba(255,255,255,.74); }
 
-.download-grid { display: grid; grid-template-columns: minmax(0, 1.18fr) minmax(280px, .82fr); gap: 22px; align-items: stretch; }
+.download-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; align-items: stretch; }
 .download-card, .requirements-card { padding: 28px; border: 1px solid var(--line); border-radius: 15px; background: #fff; box-shadow: var(--shadow-soft); }
 .download-card.featured { border-top: 4px solid var(--blue); }
+.download-card.linux-preview { border-top: 4px solid var(--green); }
 .download-card h2, .requirements-card h2 { margin: 17px 0 10px; font-size: 29px; }
 .download-card p, .requirements-card p { color: var(--muted); }
 .download-card-top, .project-top, .article-meta { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
@@ -188,7 +189,7 @@ code { padding: 2px 6px; color: var(--blue-deep); border-radius: 5px; background
 .download-button { margin-top: 3px; }
 .download-meta { margin: 17px 0 0; font-size: 11px; line-height: 1.6; overflow-wrap: anywhere; }
 .download-meta code { font-size: 10px; }
-.requirements-card { display: grid; align-content: start; gap: 9px; background: linear-gradient(145deg, #f4fbfd, #f3faf5); }
+.requirements-card { grid-column: 1 / -1; display: grid; align-content: start; gap: 9px; background: linear-gradient(145deg, #f4fbfd, #f3faf5); }
 .requirements-card .eyebrow { margin-bottom: 2px; }
 .requirement-row { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
 .requirement-row span { color: var(--muted); }

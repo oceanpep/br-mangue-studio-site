@@ -4,8 +4,8 @@ This repository contains the public landing page for BR-MANGUE Studio. It is
 published with GitHub Pages and provides the project overview, documentation
 links, release downloads, research context, and GEOTAM information.
 
-The source code is maintained separately in the private development repository:
-`oceanpep/br-mangue-studio`.
+The source code and build workflows are maintained in the public repository:
+<https://github.com/oceanpep/br-mangue-studio>.
 
 ## Local preview
 
