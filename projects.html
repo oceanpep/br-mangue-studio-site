@@ -3,22 +3,43 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Active projects and applications using BR-MANGUE Studio.">
-  <title>Projects · BR-MANGUE Studio</title>
+  <meta name="description" content="Current BR-MANGUE Studio releases, verification work, and software-paper preparation.">
+  <meta name="theme-color" content="#0d5d4f">
+  <title>Project status · BR-MANGUE Studio</title>
+  <link rel="canonical" href="https://oceanpep.github.io/br-mangue-studio-site/projects.html">
   <link rel="icon" href="assets/BR-MANGUE_BR_icon.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><img src="assets/BR-MANGUE_BR_icon.png" alt="BR-MANGUE icon"><span>MANGUE <em>Studio</em></span></a><nav aria-label="Primary navigation"><a href="index.html#about">About</a><a href="downloads.html">Download</a><a href="guide.html">Guide</a><a href="articles.html">Articles</a><a href="projects.html" aria-current="page">Projects</a></nav></div></header>
+  <a class="skip-link" href="#main">Skip to project status</a>
+  <header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><img src="assets/BR-MANGUE_BR_icon.png" alt=""><span>BR-MANGUE <em>Studio</em></span></a><nav aria-label="Primary navigation"><a href="index.html#about">What it does</a><a href="guide.html">Guide</a><a href="articles.html">Research</a><a class="nav-button" href="downloads.html">Download</a></nav></div></header>
 
-  <main>
-    <section class="page-hero"><div class="container page-hero-grid"><div><p class="eyebrow">Projects and applications</p><h1>See where the model is heading.</h1><p class="page-lead">A living portfolio of benchmarks, research applications, and future collaborations built around BR-MANGUE Studio.</p></div><div class="page-hero-badge project-badge"><span>Active now</span><b>3 tracks</b><small>Benchmark · Software · Community</small></div></div></section>
+  <main id="main">
+    <section class="page-hero"><div class="container page-hero-grid"><div><p class="eyebrow">Project status</p><h1>Current builds and verification work.</h1><p class="page-lead">BR-MANGUE Studio is maintained as open research software with documented platform and model checks.</p></div><div class="page-hero-badge"><span>Desktop builds</span><b>2</b><small>Windows stable · Linux preview</small></div></div></section>
 
-    <section class="section"><div class="container"><div class="project-grid"><article class="project-card project-featured"><div class="project-top"><span>Benchmark</span><b>Active</b></div><h2>Ilha do Maranhão scenario</h2><p>Reference testing with aligned land-cover and elevation rasters, annual simulation outputs, class mapping, animation, and continuous versus block processing.</p><div class="project-stats"><span><b>1.0.0</b> public release line</span><span><b>Annual</b> state maps</span></div></article><article class="project-card"><div class="project-top"><span>Architecture</span><b>Active</b></div><h2>Python Studio</h2><p>A focused desktop application that brings the BR-MANGUE rules into an accessible project workflow for researchers.</p><div class="project-stats"><span><b>2</b> processing engines</span><span><b>Windows</b> 10/11</span></div></article><article class="project-card"><div class="project-top"><span>Community</span><b>Preparing</b></div><h2>Research applications</h2><p>A space for studies, case areas, project partners, and future contributions that use the Studio in different coastal contexts.</p><div class="project-stats"><span><b>Open</b> for new cases</span><span><b>Direct</b> site entries</span></div></article></div></div></section>
+    <section class="section">
+      <div class="container">
+        <div class="project-grid">
+          <article class="project-card project-featured"><div class="project-top"><span>Windows</span><b>Stable</b></div><h2>Version 1.0.0</h2><p>Packaged desktop application for Windows 10/11, 64-bit, with the runtime and required Python libraries included.</p><div class="project-stats"><span><b>Download</b> available</span><span><b>Checksums</b> published</span></div></article>
+          <article class="project-card"><div class="project-top"><span>Linux</span><b>Preview</b></div><h2>x86_64 build</h2><p>Built on Ubuntu 22.04 LTS and launched on Ubuntu 26.04.1 LTS. The broader desktop workflow needs more distribution testing.</p><div class="project-stats"><span><b>glibc</b> distribution</span><span><b>ARM64</b> not supported</span></div></article>
+          <article class="project-card"><div class="project-top"><span>Research</span><b>Documented</b></div><h2>Model and engine checks</h2><p>Recorded tests cover an Ilha do Maranhão pilot, a large CMMA grid, and long-horizon runs with annual outputs.</p><div class="project-stats"><span><b>75</b> matched annual states in Linux pilot</span><span><b>Limits</b> stated in reports</span></div></article>
+        </div>
+      </div>
+    </section>
 
-    <section class="section tinted"><div class="container"><p class="eyebrow">Roadmap</p><h2>A clear path for the next releases.</h2><div class="timeline"><div class="timeline-item"><span>Now</span><div><b>Version 1.0.0</b><small>Windows distribution, direct download, annual visual outputs, and two processing engines.</small></div></div><div class="timeline-item"><span>Next</span><div><b>User manual PDF</b><small>Illustrated apostila with data preparation, class mapping, parameter choices, and result interpretation.</small></div></div><div class="timeline-item"><span>Later</span><div><b>More case studies</b><small>New coastal areas, benchmark datasets, research articles, and project stories registered on this site.</small></div></div></div></div></section>
+    <section class="section tinted">
+      <div class="container">
+        <p class="eyebrow">Work in progress</p><h2>Next verification steps.</h2>
+        <div class="timeline">
+          <div class="timeline-item"><span>Platform</span><div><b>Broaden Linux validation</b><small>Test the complete desktop raster workflow on additional distributions and retain the environment details.</small></div></div>
+          <div class="timeline-item"><span>Benchmarks</span><div><b>Repeat controlled comparisons</b><small>Use the same application build, input hashes, class mapping, parameters, and annual output settings for both engines.</small></div></div>
+          <div class="timeline-item"><span>Publication</span><div><b>Prepare a citable software release</b><small>Complete the JOSS paper and archive a tagged software release with a DOI.</small></div></div>
+        </div>
+        <div class="hero-actions"><a class="button primary" href="downloads.html">Choose a download</a><a class="button secondary" href="articles.html#benchmarks">Review test records</a></div>
+      </div>
+    </section>
   </main>
 
-  <footer class="site-footer"><div class="container footer-wrap"><span>© 2026 BR-MANGUE Studio · Software de pesquisa</span><span><a href="index.html">Home</a> · <a href="downloads.html">Downloads</a> · <a href="articles.html">Research</a></span></div></footer>
+  <footer class="site-footer"><div class="container footer-wrap"><span>© 2026 BR-MANGUE Studio · Research software by GEOTAM, UFMA</span><span><a href="index.html">Home</a> · <a href="articles.html">Research</a> · <a href="downloads.html">Downloads</a></span></div></footer>
 </body>
 </html>

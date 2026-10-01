@@ -3,26 +3,52 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="CMMA and ANADEM performance benchmark for BR-MANGUE Studio.">
-  <title>CMMA + ANADEM benchmark · BR-MANGUE Studio</title>
+  <meta name="description" content="Recorded BR-MANGUE Studio performance runs on the full CMMA raster and a long-horizon Windows audit, with methods and limitations.">
+  <meta name="theme-color" content="#0d5d4f">
+  <title>CMMA benchmark records · BR-MANGUE Studio</title>
+  <link rel="canonical" href="https://oceanpep.github.io/br-mangue-studio-site/benchmark-cmma-anadem-20260917.html">
   <link rel="icon" href="assets/BR-MANGUE_BR_icon.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><img src="assets/BR-MANGUE_BR_icon.png" alt="BR-MANGUE icon"><span>MANGUE <em>Studio</em></span></a><nav aria-label="Primary navigation"><a href="index.html#about">About</a><a href="index.html#performance">Performance</a><a href="downloads.html">Download</a><a href="guide.html">Guide</a><a href="articles.html" aria-current="page">Articles</a><a href="projects.html">Projects</a></nav></div></header>
+  <a class="skip-link" href="#main">Skip to benchmark</a>
+  <header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><img src="assets/BR-MANGUE_BR_icon.png" alt=""><span>BR-MANGUE <em>Studio</em></span></a><nav aria-label="Primary navigation"><a href="index.html#about">What it does</a><a href="guide.html">Guide</a><a href="articles.html" aria-current="page">Research</a><a class="nav-button" href="downloads.html">Download</a></nav></div></header>
 
-  <main>
-    <section class="page-hero"><div class="container page-hero-grid"><div><p class="eyebrow">Benchmark note · 17 September 2026</p><h1>How the Studio scales across the CMMA.</h1><p class="page-lead">CMMA means <em>Costa de Manguezais de Macromaré da Amazônia</em> — the Amazon macro-tidal mangrove coast. This note compares continuous and persistent-block processing with a complete land-cover grid and ANADEM, a 30 m Digital Terrain Model (MDT/DEM) that represents terrain height.</p></div><div class="page-hero-badge"><span>Measured run</span><b>78.007M</b><small>active cells · 30 m grid</small></div></div></section>
+  <main id="main">
+    <section class="page-hero"><div class="container page-hero-grid"><div><p class="eyebrow">CMMA + ANADEM · Benchmark records</p><h1>How large-grid runs performed.</h1><p class="page-lead">Two distinct CMMA test records are reported below: a one-step engine benchmark and Windows runs with 76 annual outputs.</p></div><div class="page-hero-badge"><span>Study grid</span><b>78.007M</b><small>valid cells · 30 m</small></div></div></section>
 
-    <section class="section"><div class="container">
-      <div class="metric-grid"><div class="metric-card"><strong>78.01M</strong><span>cell-updates measured</span></div><div class="metric-card"><strong>123.6 s</strong><span>continuous run</span></div><div class="metric-card"><strong>476.7 s</strong><span>blocks run</span></div><div class="metric-card"><strong>0</strong><span>state differences</span></div></div>
-      <p class="section-intro">The benchmark covers one annual transition from 2024 to 2025 across the complete CMMA grid. The land-cover input describes classes such as mangrove, water, natural vegetation, and blocked areas. ANADEM supplies the matching terrain height: it is a Digital Terrain Model (MDT/DEM), not a land-cover map. Each engine was run once with the same inputs and parameters; annual GeoTIFF snapshots were disabled so the comparison measures simulation work rather than export time.</p>
-      <div class="benchmark-table-wrap"><table class="benchmark-table"><thead><tr><th>Engine</th><th>Configuration</th><th>Elapsed time</th><th>Throughput</th><th>Peak RSS</th></tr></thead><tbody><tr><td>Continuous</td><td>Active grid held in memory</td><td>123.6 s</td><td>0.631M cell-updates/s</td><td>5.92 GiB</td></tr><tr><td>Blocks</td><td>Persistent 10,000-cell chunks</td><td>476.7 s</td><td>0.164M cell-updates/s</td><td>10.01 GiB</td></tr></tbody></table></div>
-      <div class="benchmark-detail"><div><h3>Input and scenario</h3><p>CMMA V2 land-cover data for 2024, plus matching ANADEM 30 m terrain tiles covering the full study area. Tide influence: 6.0 m. Sea-level rise: 0.3 mm/year. Soil/suitability layer disabled; migration fallback enabled.</p></div><div><h3>What the check tells us</h3><p>The two engines produced byte-identical final GeoTIFFs and identical annual trajectories. This verifies implementation equivalence and gives a transparent performance reference; it is not an ecological validation or a universal hardware limit.</p></div></div>
-      <p class="benchmark-note">Host used for the reference measurement: Intel Core i3-1215U with 19.7 GiB total RAM. Scaling the recorded 78.007-million-cell footprint to 80 million cells gives a first-order estimate of 6.1 GiB for the active state after a step. The continuous step also creates a temporary previous-state snapshot of about 0.7 GiB, so a practical planning figure is roughly 6.8 GiB before application overhead; reserve 8–10 GiB free. These arrays are reused on every step. Therefore, 20 steps do not require 20 times more RAM: memory remains in roughly the same range, while elapsed time grows with the number of steps and annual rasters use disk space. Exporting an annual map can create a short-lived raster buffer, but those buffers are released rather than accumulated. Continuous is faster when the active grid fits in RAM because it avoids persistent block I/O. The 10.01 GiB blocks value in the table belongs to the archived reference run, before the input-grid release optimization. The current block runner copies the input arrays to persistent state files, releases the materialized grid while the simulation runs, and reopens the grid only for post-run maps and figures. Blocks are the capacity and recovery choice for domains that cannot fit safely in RAM, including very large macro-tidal Amazon coastal studies. Actual times and memory vary with CPU load, storage, output settings, and raster size.</p>
-    </div></section>
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow">One-step engine benchmark</p>
+        <h2>Same inputs and settings, one annual transition.</h2>
+        <div class="metric-grid"><div class="metric-card"><strong>78.007M</strong><span>active cells</span></div><div class="metric-card"><strong>123.6 s</strong><span>continuous</span></div><div class="metric-card"><strong>476.7 s</strong><span>blocks · 10,000 cells</span></div><div class="metric-card"><strong>0</strong><span>state differences</span></div></div>
+        <p class="section-intro">This archived run covers the full Costa de Manguezais de Macromaré da Amazônia (CMMA) raster: 18,352 × 21,350 cells at 30 m, using 2024 land-cover data and matching ANADEM terrain elevation. It measures one transition, from 2024 to 2025. Annual GeoTIFF export was disabled, so the times describe simulation work rather than a 76-year run with map writing.</p>
+        <div class="benchmark-table-wrap"><table class="benchmark-table"><thead><tr><th>Engine</th><th>Configuration</th><th>Elapsed</th><th>Throughput</th><th>Peak process memory</th></tr></thead><tbody><tr><td>Continuous</td><td>Active grid held in memory</td><td>123.6 s</td><td>0.631M cell-updates/s</td><td>5.92 GiB</td></tr><tr><td>Persistent blocks</td><td>10,000-cell chunks</td><td>476.7 s</td><td>0.164M cell-updates/s</td><td>10.01 GiB</td></tr></tbody></table></div>
+        <div class="benchmark-detail"><div><h3>Inputs and scenario</h3><p>CMMA V2 land-cover data for 2024 and matching ANADEM 30 m terrain tiles. Tidal influence: 6.0 m. Sea-level rise: 0.3 mm/year. Soil and suitability layer disabled; migration fallback enabled.</p></div><div><h3>What this check shows</h3><p>The recorded final rasters and trajectory matched between the two engines for this test. This supports computational consistency for these settings; it is not ecological validation or a universal speed estimate.</p></div></div>
+        <p class="benchmark-note">The run used an Intel Core i3-1215U with 19.7 GiB of RAM. Annual map writing, repeated measurements, and other hardware can change elapsed time and memory use. The historical block memory figure is from the archived run before an input-grid release optimization.</p>
+      </div>
+    </section>
+
+    <section class="section tinted">
+      <div class="container">
+        <p class="eyebrow">Windows long-horizon runs</p>
+        <h2>Each engine completed a 2024–2100 run.</h2>
+        <p class="section-intro">The supplied Windows metadata records 76 annual transitions and 76 exported state maps (2025–2100) per run over the same 78,007,309-cell raster. The durations below are about four hours <em>per engine</em>.</p>
+        <div class="benchmark-table-wrap"><table class="benchmark-table"><thead><tr><th>Run</th><th>Block size</th><th>Total elapsed</th><th>Annual outputs</th><th>Peak process memory</th></tr></thead><tbody><tr><td>Continuous</td><td>—</td><td>3 h 52 min 1 s</td><td>76 maps</td><td>4.67 GiB</td></tr><tr><td>Persistent blocks</td><td>1,000,000 cells</td><td>4 h 11 min 5 s</td><td>76 maps</td><td>5.41 GiB</td></tr></tbody></table></div>
+        <div class="notice"><strong>These two Windows timings are not a controlled engine comparison.</strong><small>Although both metadata files name the same land-cover and elevation inputs, the class mappings differ. The maturity setting is also absent from the block-run metadata. The audit sampled the 2025 and 2100 maps and checked them against the recorded trajectories; it did not compare all 76 rasters pixel by pixel.</small></div>
+        <p class="benchmark-note">The recorded total across both runs is approximately 8 h 03 min. The run folders did not record the executable version, code commit, Windows edition, CPU model, or input-file checksums, so the results are descriptive evidence for those runs rather than a fully reproducible performance claim.</p>
+        <p><a class="text-link" href="https://github.com/oceanpep/br-mangue-studio/blob/main/docs/benchmarks/CMMA_WINDOWS_2024_2100_20261001.md">Read the complete Windows audit →</a></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div><p class="eyebrow">Related test</p><h2>Controlled long-horizon pilot on Linux.</h2><p>The Ilha do Maranhão pilot used the same inputs and parameters for both engines over 75 years. All annual raster cells and trajectory measures matched. The input raster had no island boundary mask, so the run is a software test over the raster intersection, not an island-scale ecological projection.</p><a class="text-link" href="https://github.com/oceanpep/br-mangue-studio/blob/main/docs/benchmarks/ILHA_LINUX_20261001.md">Read the Linux pilot report →</a></div>
+        <div class="info-card"><strong>Interpret the evidence carefully</strong><span>Different tests answer different questions</span><small>The one-step CMMA benchmark compares two engines under matched settings. The Windows 76-year runs measure end-to-end work with annual exports but have configuration differences. The Linux pilot checks annual-state agreement on a smaller, unmasked raster.</small></div>
+      </div>
+    </section>
   </main>
 
-  <footer class="site-footer"><div class="container footer-wrap"><span>© 2026 BR-MANGUE Studio · Research software</span><span><a href="index.html">Home</a> · <a href="downloads.html">Downloads</a> · <a href="guide.html">Guide</a></span></div></footer>
+  <footer class="site-footer"><div class="container footer-wrap"><span>© 2026 BR-MANGUE Studio · Research software by GEOTAM, UFMA</span><span><a href="index.html">Home</a> · <a href="articles.html">Research</a> · <a href="downloads.html">Downloads</a></span></div></footer>
 </body>
 </html>

@@ -3,61 +3,80 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Download BR-MANGUE Studio for Windows and Linux, with platform requirements and checksums.">
+  <meta name="description" content="Download BR-MANGUE Studio for Windows or Linux. Check platform requirements, included libraries, and file checksums.">
+  <meta name="theme-color" content="#0d5d4f">
   <title>Downloads · BR-MANGUE Studio</title>
+  <link rel="canonical" href="https://oceanpep.github.io/br-mangue-studio-site/downloads.html">
   <link rel="icon" href="assets/BR-MANGUE_BR_icon.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to downloads</a>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="index.html"><img src="assets/BR-MANGUE_BR_icon.png" alt="BR-MANGUE icon"><span>MANGUE <em>Studio</em></span></a>
+      <a class="brand" href="index.html"><img src="assets/BR-MANGUE_BR_icon.png" alt=""><span>BR-MANGUE <em>Studio</em></span></a>
       <nav aria-label="Primary navigation">
-        <a href="index.html#about">About</a><a href="downloads.html" aria-current="page">Download</a><a href="guide.html">Guide</a><a href="articles.html">Articles</a><a href="projects.html">Projects</a>
+        <a href="index.html#about">What it does</a><a href="guide.html">Guide</a><a href="articles.html">Research</a><a class="nav-button" href="downloads.html" aria-current="page">Download</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="page-hero">
       <div class="container page-hero-grid">
-        <div><p class="eyebrow">Download center</p><h1>Start your next coastal scenario.</h1><p class="page-lead">Choose the BR-MANGUE Studio desktop build for your computer.</p></div>
-        <div class="page-hero-badge"><span>Desktop builds</span><b>1.0.0</b><small>Windows stable · Linux preview · 64-bit</small></div>
+        <div><p class="eyebrow">Desktop application · Version 1.0.0</p><h1>Choose your operating system.</h1><p class="page-lead">Both packaged applications include Python and the project's required Python libraries. No separate Python installation is needed.</p></div>
+        <div class="page-hero-badge"><span>Two builds</span><b>64-bit</b><small>Windows stable · Linux preview</small></div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
         <div class="download-grid">
-          <article class="download-card featured">
-            <div class="download-card-top"><span class="release-tag">Recommended</span><span class="release-date">September 2026</span></div>
-            <h2>BR-MANGUE Studio 1.0.0</h2>
-            <p>A ready-to-run Windows application for spatial cellular modelling of mangrove response to sea-level rise.</p>
-            <ul class="check-list"><li>Windows 10 or Windows 11, 64-bit</li><li>Continuous and block processing engines</li><li>Optional mangrove suitability raster</li><li>Integrated maps, animation, charts, and CSV outputs</li></ul>
-            <a class="button primary download-button" href="downloads/BR-MANGUE_Studio-1.0.0-Windows-x64.exe" download>Download for Windows · 86.6 MB</a>
-            <p class="download-meta">File: BR-MANGUE_Studio-1.0.0-Windows-x64.exe<br>SHA-256: <code>90194AF11A4D88560F1A4F1ACE124A11683171DCCDCEAF646CE3BDC0F42F4850</code></p>
+          <article class="download-card featured" id="windows">
+            <div class="download-card-top"><span class="release-tag">Stable</span><span class="release-date">Version 1.0.0</span></div>
+            <h2>Windows 10 or 11</h2>
+            <p>Ready-to-run desktop application for 64-bit Windows computers.</p>
+            <ul class="check-list"><li>Continuous and persistent-block engines</li><li>Maps, annual GeoTIFFs, charts, and CSV results</li><li>Python and project libraries included</li><li>Internet only needed to download the file</li></ul>
+            <a class="button primary download-button" href="downloads/BR-MANGUE_Studio-1.0.0-Windows-x64.exe" download>Download for Windows · 92.6 MiB</a>
+            <p class="download-meta">File: <code>BR-MANGUE_Studio-1.0.0-Windows-x64.exe</code><br>SHA-256: <code>90194AF11A4D88560F1A4F1ACE124A11683171DCCDCEAF646CE3BDC0F42F4850</code><br><a href="downloads/BR-MANGUE_Studio-1.0.0-Windows-x64.exe.sha256">Download checksum file</a></p>
           </article>
-          <article class="download-card linux-preview">
-            <div class="download-card-top"><span class="release-tag">Research preview</span><span class="release-date">October 2026</span></div>
-            <h2>BR-MANGUE Studio 1.0.0 for Linux</h2>
-            <p>A native Linux x86_64 research preview. The app starts on Ubuntu 26.04.1; full raster loading and simulation workflows still need broader Linux validation.</p>
-            <ul class="check-list"><li>64-bit Intel/AMD (x86_64)</li><li>Ubuntu 22.04 LTS build; startup verified on Ubuntu 26.04.1 LTS</li><li>Graphical desktop required (X11 or Wayland)</li><li>Python and project libraries are bundled</li></ul>
+
+          <article class="download-card linux-preview" id="linux">
+            <div class="download-card-top"><span class="release-tag">Research preview</span><span class="release-date">Version 1.0.0</span></div>
+            <h2>Linux x86_64</h2>
+            <p>For 64-bit Intel and AMD computers with a graphical Linux desktop.</p>
+            <ul class="check-list"><li>Built on Ubuntu 22.04 LTS</li><li>Application startup verified on Ubuntu 26.04.1 LTS</li><li>Python and project libraries included</li><li>Raster workflow still needs broader desktop validation</li></ul>
             <a class="button primary download-button" href="downloads/BRMANGUE_Studio_Linux_x86_64" download>Download for Linux · 94.8 MiB</a>
-            <p class="download-meta">File: BRMANGUE_Studio_Linux_x86_64<br>SHA-256: <code>369A4F8A296EB61BCF5A53D6EC63042B3D6A7111F298731F40FFEC4FA47A2AB9</code><br><a href="downloads/BRMANGUE_Studio_Linux_x86_64.sha256">Download checksum file</a></p>
+            <p class="download-meta">File: <code>BRMANGUE_Studio_Linux_x86_64</code><br>SHA-256: <code>369A4F8A296EB61BCF5A53D6EC63042B3D6A7111F298731F40FFEC4FA47A2AB9</code><br><a href="downloads/BRMANGUE_Studio_Linux_x86_64.sha256">Download checksum file</a></p>
           </article>
-          <aside class="requirements-card"><p class="eyebrow">Linux compatibility</p><h2>Ubuntu tested.</h2><p>The Linux build was created in Ubuntu 22.04 LTS on x86_64 and launched successfully on Ubuntu 26.04.1 LTS on this project workstation.</p><div class="requirement-row"><span>Recommended</span><b>Ubuntu 22.04 LTS or newer</b></div><div class="requirement-row"><span>Other distributions</span><b>x86_64 · glibc 2.35+</b></div><div class="requirement-row"><span>Desktop</span><b>X11 or Wayland · xdg-open</b></div><div class="notice"><strong>Compatibility status</strong><small>Ubuntu 24.04, Linux Mint 22, and Debian 13 are expected to work, but have not been individually tested. Other glibc-based x86_64 distributions may also work. Alpine Linux (musl) and ARM64 are not supported by this build.</small></div><div class="notice"><strong>First launch on Linux</strong><small>If double-click does not start the app, allow the file to run as a program in Properties, or open it from a terminal. Internet is only needed to download the file.</small></div></aside>
         </div>
       </div>
     </section>
 
     <section class="section tinted">
       <div class="container split">
-        <div><p class="eyebrow">Version history</p><h2>One clear release line.</h2><p>Windows 1.0.0 is the stable public release. Linux x86_64 is available as a research preview while compatibility is evaluated across distributions.</p></div>
-        <div class="release-list"><div><span>1.0.0</span><b>Windows stable release</b><small>Windows 10/11 · 64-bit · Python desktop application</small></div><div><span>1.0.0</span><b>Linux research preview</b><small>Ubuntu 22.04 build · x86_64 · other distributions not yet verified</small></div></div>
+        <div><p class="eyebrow">Linux compatibility</p><h2>Ubuntu tested; other systems may work.</h2><p>The executable was built on Ubuntu 22.04 LTS and opened successfully on Ubuntu 26.04.1 LTS on the project workstation. A graphical session (X11 or Wayland), x86_64 processor, compatible glibc libraries, and <code>xdg-open</code> are needed to open result files and folders.</p></div>
+        <div class="link-list">
+          <a href="#linux"><span>Tested</span><small>Ubuntu 22.04 build · startup on Ubuntu 26.04.1</small><b>✓</b></a>
+          <a href="#linux"><span>Expected, not individually tested</span><small>Ubuntu 24.04 · Linux Mint 22 · Debian 13</small><b>·</b></a>
+          <a href="#linux"><span>Not supported by this build</span><small>Alpine Linux (musl) · ARM64</small><b>×</b></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow">First launch</p><h2>Open the downloaded file.</h2>
+        <div class="benchmark-detail">
+          <div><h3>Windows</h3><p>Open the downloaded <code>.exe</code> from a folder where you can save project files. The app starts without a separate Python installation.</p></div>
+          <div><h3>Linux</h3><p>In the file manager, open the file's Properties and enable <strong>Allow executing file as a program</strong>, then double-click. If that option is unavailable, open a terminal in the Downloads folder and run:</p><pre class="command-block"><code>chmod +x ./BRMANGUE_Studio_Linux_x86_64
+./BRMANGUE_Studio_Linux_x86_64</code></pre></div>
+        </div>
+        <p class="benchmark-note"><strong>Your data stays with you.</strong> Downloads include the application runtime, not MapBiomas, ANADEM, or study data. Choose a folder with enough disk space for annual raster outputs.</p>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer"><div class="container footer-wrap"><span>© 2026 BR-MANGUE Studio · Software de pesquisa</span><span><a href="index.html">Home</a> · <a href="guide.html">Guide</a> · <a href="articles.html">Research</a></span></div></footer>
+  <footer class="site-footer"><div class="container footer-wrap"><span>© 2026 BR-MANGUE Studio · Research software by GEOTAM, UFMA</span><span><a href="index.html">Home</a> · <a href="guide.html">Guide</a> · <a href="articles.html">Research</a></span></div></footer>
 </body>
 </html>
