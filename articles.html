@@ -1,75 +1,10 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Reference research, the BR-MANGUE Studio software paper, and benchmark records with their methods and limitations.">
-  <meta name="theme-color" content="#0d5d4f">
-  <title>Research and test records · BR-MANGUE Studio</title>
-  <link rel="canonical" href="https://oceanpep.github.io/br-mangue-studio-site/articles.html">
-  <link rel="icon" href="assets/BR-MANGUE_BR_icon.png" type="image/png">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to research</a>
-  <header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><img src="assets/BR-MANGUE_BR_icon.png" alt=""><span>BR-MANGUE <em>Studio</em></span></a><nav aria-label="Primary navigation"><a href="index.html#about">What it does</a><a href="guide.html">Guide</a><a href="articles.html" aria-current="page">Research</a><a class="nav-button" href="downloads.html">Download</a></nav></div></header>
-
-  <main id="main">
-    <section class="page-hero"><div class="container page-hero-grid"><div><p class="eyebrow">Research and methods</p><h1>Read the science and inspect the tests.</h1><p class="page-lead">Reference research, the software paper draft, and recorded software tests in one place.</p></div><div class="page-hero-badge"><span>Open records</span><b>Sources</b><small>Paper · Pilot · Benchmarks</small></div></div></section>
-
-    <section class="section">
-      <div class="container">
-        <div class="article-grid">
-          <article class="article-card featured-article">
-            <div class="article-meta"><span>Reference study</span><small>2014</small></div>
-            <h2>Simulating sea-level rise impacts on mangrove ecosystem adjacent to anthropic areas: the case of Maranhão Island, Brazilian Northeast</h2>
-            <p class="byline">Denilson da Silva Bezerra · Silvana Amaral · Milton Kampel · Pedro Ribeiro de Andrade</p>
-            <p>The published study introduced the BR-MANGUE spatial cellular model and provides the scientific starting point for this software.</p>
-            <a class="text-link" href="https://panamjas.org/pdf_artigos/PANAMJAS_9%283%29_188-198.pdf">Read the 2014 article →</a>
-          </article>
-          <article class="article-card">
-            <div class="article-meta"><span>Software paper</span><small>JOSS format</small></div>
-            <h2>BR-MANGUE Studio</h2>
-            <p>The manuscript describes the software's need, model design, research use, and reproducible outputs. It is a working draft.</p>
-            <a class="text-link" href="https://github.com/oceanpep/br-mangue-studio/blob/main/paper.md">Read the manuscript draft →</a>
-            <div class="article-tags"><span>Research software</span><span>JOSS</span></div>
-          </article>
-          <article class="article-card">
-            <div class="article-meta"><span>Linux pilot</span><small>2025–2100</small></div>
-            <h2>Ilha do Maranhão engine comparison</h2>
-            <p>On 2.34 million valid raster cells, continuous and block engines produced identical initial and annual maps across 75 steps. The raster had no island boundary mask.</p>
-            <a class="text-link" href="https://github.com/oceanpep/br-mangue-studio/blob/main/docs/benchmarks/ILHA_LINUX_20261001.md">Read the pilot report →</a>
-            <div class="article-tags"><span>Linux</span><span>Pixelwise check</span></div>
-          </article>
-          <article class="article-card">
-            <div class="article-meta"><span>Windows run audit</span><small>2024–2100</small></div>
-            <h2>Annual outputs on the full CMMA grid</h2>
-            <p>The recorded continuous run took 3 h 52 min; the block run took 4 h 11 min. Each exported 76 annual maps. Their class mappings differed, so the times are separate observations, not a controlled engine comparison.</p>
-            <a class="text-link" href="https://github.com/oceanpep/br-mangue-studio/blob/main/docs/benchmarks/CMMA_WINDOWS_2024_2100_20261001.md">Read the Windows audit →</a>
-            <div class="article-tags"><span>Windows</span><span>78 million cells</span></div>
-          </article>
-          <article class="article-card" id="benchmarks">
-            <div class="article-meta"><span>Large-grid benchmark</span><small>Linux · 2024–2025</small></div>
-            <h2>Continuous and block processing</h2>
-            <p>A one-step test across 78.007 million active cells recorded 123.6 seconds in continuous mode and 476.7 seconds in blocks, without annual GeoTIFF export. The recorded outputs matched.</p>
-            <a class="text-link" href="benchmark-cmma-anadem-20260917.html">Read the benchmark details →</a>
-            <div class="article-tags"><span>Performance</span><span>CMMA + ANADEM</span></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section tinted">
-      <div class="container split">
-        <div><p class="eyebrow">Use the software carefully</p><h2>Computation is one part of validation.</h2><p>Matching outputs show that two engines computed the same states for specified inputs and parameters. They do not show that those states predict ecological change accurately.</p></div>
-        <div class="link-list">
-          <a href="https://github.com/oceanpep/br-mangue-studio/blob/main/docs/REPRODUCIBILITY_AND_BENCHMARKING.md"><span>Reproducibility protocol</span><small>Record data, settings, hardware, and outputs</small><b>↗</b></a>
-          <a href="https://github.com/oceanpep/br-mangue-studio/blob/main/CITATION.cff"><span>Cite the software</span><small>Authors, version, and repository identifiers</small><b>↗</b></a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer"><div class="container footer-wrap"><span>© 2026 BR-MANGUE Studio · Research software by GEOTAM, UFMA</span><span><a href="index.html">Home</a> · <a href="downloads.html">Downloads</a> · <a href="guide.html">Guide</a></span></div></footer>
-</body>
-</html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Published scientific background and transparent software test records for BR-MANGUE Studio."><meta name="theme-color" content="#0d5d4f"><title>Research and test records · BR-MANGUE Studio</title><link rel="canonical" href="https://oceanpep.github.io/br-mangue-studio-site/articles.html"><link rel="alternate" hreflang="en" href="https://oceanpep.github.io/br-mangue-studio-site/articles.html"><link rel="alternate" hreflang="pt-BR" href="https://oceanpep.github.io/br-mangue-studio-site/pt-br/articles.html"><link rel="icon" href="assets/BR-MANGUE_BR_icon.png" type="image/png"><link rel="stylesheet" href="styles.css"></head><body>
+<a class="skip-link" href="#main">Skip to research</a><header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><img src="assets/BR-MANGUE_BR_icon.png" alt=""><span>BR-MANGUE <em>Studio</em></span></a><nav aria-label="Primary navigation"><a href="index.html#about">Overview</a><a href="guide.html">Guide</a><a href="articles.html" aria-current="page">Research</a><a class="nav-button" href="downloads.html">Download</a></nav><div class="language-switch" aria-label="Choose language"><a href="articles.html" aria-current="page" lang="en">EN</a><a href="pt-br/articles.html" lang="pt-BR">PT-BR</a></div></div></header>
+<main id="main"><section class="page-hero"><div class="container page-hero-grid"><div><p class="eyebrow">Research and methods</p><h1>Read the science. Check the evidence.</h1><p class="page-lead">Find the published scientific background and summaries of software tests, including what each test can and cannot show.</p></div><div class="page-hero-badge"><span>Research records</span><b>Sources</b><small>Published study · Software checks</small></div></div></section>
+<section class="section"><div class="container"><div class="article-grid"><article class="article-card featured-article"><div class="article-meta"><span>Published scientific background</span><small>2014</small></div><h2>The original BR-MANGUE model study</h2><p>The published study introduced the spatial cellular model that underpins this software. BR-MANGUE Studio extends that research into a desktop workflow for preparing scenarios and examining model outputs.</p><a class="text-link" href="https://panamjas.org/pdf_artigos/PANAMJAS_9%283%29_188-198.pdf">Read the published study →</a></article>
+<article class="article-card"><div class="article-meta"><span>Linux pilot</span><small>75 steps</small></div><h2>Annual-state agreement</h2><p>On a pilot raster with 2.34 million valid cells, the continuous and persistent-block engines produced matching annual maps and trajectories under the same settings.</p><div class="article-tags"><span>Linux</span><span>Pixelwise check</span></div></article>
+<article class="article-card"><div class="article-meta"><span>Windows run record</span><small>To 2100</small></div><h2>Annual outputs on a large raster</h2><p>Each engine run took about four hours and exported 76 annual maps. The class mappings differed between runs, so these timings are separate observations rather than a controlled engine comparison.</p><div class="article-tags"><span>Windows</span><span>76 maps per run</span></div></article>
+<article class="article-card"><div class="article-meta"><span>Large-raster check</span><small>One transition</small></div><h2>Continuous and block processing</h2><p>A one-step run across 78.007 million active cells took 123.6 seconds in continuous mode and 476.7 seconds in blocks. The recorded outputs matched; annual map export was disabled.</p><a class="text-link" href="benchmarks.html">Read benchmark methods →</a><div class="article-tags"><span>Performance</span><span>78 million cells</span></div></article></div></div></section>
+<section class="section tinted"><div class="container split"><div><p class="eyebrow">Interpret the evidence</p><h2>Matching output is a software check.</h2><p>Agreement between two engines shows that they computed the same states for the tested inputs and settings. It does not establish that the simulated changes accurately predict ecological outcomes.</p></div><div class="link-list"><a href="benchmarks.html"><span>Benchmark methods</span><small>Hardware, run settings, and limitations</small><b>→</b></a><a href="https://github.com/oceanpep/br-mangue-studio/blob/main/docs/REPRODUCIBILITY_AND_BENCHMARKING.md"><span>Reproducibility protocol</span><small>What to record for a research run</small><b>↗</b></a><a href="https://github.com/oceanpep/br-mangue-studio/blob/main/CITATION.cff"><span>Cite the software</span><small>Version and repository citation data</small><b>↗</b></a></div></div></section></main>
+<footer class="site-footer"><div class="container footer-wrap"><span>© 2026 BR-MANGUE Studio · Research software by GEOTAM, UFMA</span><span><a href="index.html">Home</a> · <a href="downloads.html">Downloads</a> · <a href="guide.html">Guide</a></span></div></footer></body></html>

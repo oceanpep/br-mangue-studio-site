@@ -1,76 +1,10 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Prepare raster inputs, set a scenario, and inspect annual results in BR-MANGUE Studio.">
-  <meta name="theme-color" content="#0d5d4f">
-  <title>Quick-start guide · BR-MANGUE Studio</title>
-  <link rel="canonical" href="https://oceanpep.github.io/br-mangue-studio-site/guide.html">
-  <link rel="icon" href="assets/BR-MANGUE_BR_icon.png" type="image/png">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to guide</a>
-  <header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><img src="assets/BR-MANGUE_BR_icon.png" alt=""><span>BR-MANGUE <em>Studio</em></span></a><nav aria-label="Primary navigation"><a href="index.html#about">What it does</a><a href="guide.html" aria-current="page">Guide</a><a href="articles.html">Research</a><a class="nav-button" href="downloads.html">Download</a></nav></div></header>
-
-  <main id="main">
-    <section class="page-hero"><div class="container page-hero-grid"><div><p class="eyebrow">Quick-start guide</p><h1>Prepare data. Run a scenario. Inspect the results.</h1><p class="page-lead">A short guide to the main BR-MANGUE Studio workflow.</p></div><div class="page-hero-badge guide-badge"><span>Start here</span><b>4 steps</b><small>Project · Inputs · Scenario · Results</small></div></div></section>
-
-    <section id="workflow" class="section">
-      <div class="container">
-        <div class="step-grid">
-          <article><span>01</span><h2>Create a project</h2><p>Choose a project folder and a separate location with enough disk space for results.</p></article>
-          <article><span>02</span><h2>Load two rasters</h2><p>Choose land cover and elevation on the same grid, extent, resolution, and coordinate reference.</p></article>
-          <article><span>03</span><h2>Review the scenario</h2><p>Map source classes to model roles, set years and coastal parameters, then select an engine.</p></article>
-          <article><span>04</span><h2>Run and inspect</h2><p>View annual maps, trajectories, transitions, and metadata in the results folder.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="inputs" class="section tinted">
-      <div class="container split">
-        <div><p class="eyebrow">Input data</p><h2>Start with aligned GeoTIFFs.</h2><p>Land cover contains numeric categories; elevation supplies terrain height for the model rules. The raster cells must line up. The application can help reproject or align inputs when the source grids differ.</p></div>
-        <div class="input-list">
-          <div><span>Land cover</span><b>Categorical GeoTIFF</b></div>
-          <div><span>Elevation</span><b>GeoTIFF · same grid</b></div>
-          <div><span>Study-area mask</span><b>Optional GeoTIFF</b></div>
-          <div><span>Suitability or soil</span><b>Optional GeoTIFF</b></div>
-          <div><span>Other providers</span><b>Supported when grids align</b></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="engines" class="section">
-      <div class="container">
-        <p class="eyebrow">Processing engines</p><h2>Choose how to process the grid.</h2>
-        <div class="engine-grid">
-          <article><span class="engine-mark">Continuous</span><h2>For speed when memory allows</h2><p>Keeps model state in memory and was faster in the recorded benchmark runs. Check available RAM before choosing it for a very large raster.</p></article>
-          <article><span class="engine-mark">Persistent blocks</span><h2>For capacity and recovery</h2><p>Stores model state in persistent files and processes it in chunks. It can make very large runs easier to recover, with additional disk use and processing time.</p></article>
-        </div>
-        <p class="benchmark-note">Both engines matched every annual state in the controlled Linux Ilha pilot. The archived long-horizon Windows runs used different class mappings, so their times cannot establish which engine is faster.</p>
-      </div>
-    </section>
-
-    <section class="section tinted">
-      <div class="container split">
-        <div><p class="eyebrow">Results</p><h2>Keep the evidence with the maps.</h2><p>A run folder can contain the annual state rasters and tables that describe what the model changed and how long each step took.</p></div>
-        <div class="link-list">
-          <a href="articles.html#benchmarks"><span>Annual GeoTIFFs</span><small>One state map per simulated year, when export is enabled</small><b>·</b></a>
-          <a href="articles.html#benchmarks"><span>Trajectory and transition tables</span><small>CSV summaries of yearly classes and transitions</small><b>·</b></a>
-          <a href="https://github.com/oceanpep/br-mangue-studio/blob/main/docs/REPRODUCIBILITY_AND_BENCHMARKING.md"><span>Run metadata</span><small>Input configuration, parameters, timing, and resources</small><b>↗</b></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container split">
-        <div><p class="eyebrow">User manual</p><h2>Read the complete manual.</h2><p>The Portuguese manual provides screenshots and detailed instructions for preparing inputs and operating the desktop application.</p><a class="button primary" href="https://raw.githubusercontent.com/oceanpep/br-mangue-studio/main/docs/downloads/Manual_Usuario_BR_MANGUE_Studio_1.0.0.pdf">Download the user manual · PDF</a></div>
-        <div class="info-card"><strong>Before interpreting a map</strong><span>Check the inputs and scenario</span><small>Record source data, class mapping, coordinate reference, years, coastal parameters, and engine. A software test verifies computation; it does not establish ecological validity.</small></div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer"><div class="container footer-wrap"><span>© 2026 BR-MANGUE Studio · Research software by GEOTAM, UFMA</span><span><a href="index.html">Home</a> · <a href="downloads.html">Downloads</a> · <a href="articles.html">Research</a></span></div></footer>
-</body>
-</html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Prepare raster inputs, configure a scenario, and inspect annual results in BR-MANGUE Studio."><meta name="theme-color" content="#0d5d4f"><title>Quick-start guide · BR-MANGUE Studio</title><link rel="canonical" href="https://oceanpep.github.io/br-mangue-studio-site/guide.html"><link rel="alternate" hreflang="en" href="https://oceanpep.github.io/br-mangue-studio-site/guide.html"><link rel="alternate" hreflang="pt-BR" href="https://oceanpep.github.io/br-mangue-studio-site/pt-br/guide.html"><link rel="icon" href="assets/BR-MANGUE_BR_icon.png" type="image/png"><link rel="stylesheet" href="styles.css"></head><body>
+<a class="skip-link" href="#main">Skip to guide</a><header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><img src="assets/BR-MANGUE_BR_icon.png" alt=""><span>BR-MANGUE <em>Studio</em></span></a><nav aria-label="Primary navigation"><a href="index.html#about">Overview</a><a href="guide.html" aria-current="page">Guide</a><a href="articles.html">Research</a><a class="nav-button" href="downloads.html">Download</a></nav><div class="language-switch" aria-label="Choose language"><a href="guide.html" aria-current="page" lang="en">EN</a><a href="pt-br/guide.html" lang="pt-BR">PT-BR</a></div></div></header>
+<main id="main"><section class="page-hero"><div class="container page-hero-grid"><div><p class="eyebrow">Quick-start guide</p><h1>Prepare data. Run a scenario. Inspect the results.</h1><p class="page-lead">The main BR-MANGUE Studio workflow in four steps.</p></div><div class="page-hero-badge guide-badge"><span>Start here</span><b>4 steps</b><small>Project · Inputs · Scenario · Results</small></div></div></section>
+<section id="workflow" class="section"><div class="container"><div class="step-grid"><article><span>01</span><h2>Create a project</h2><p>Choose a project folder and a separate location with enough disk space for results.</p></article><article><span>02</span><h2>Load two rasters</h2><p>Choose land cover and a digital elevation model (DEM) on the same grid, extent, resolution, and coordinate reference system.</p></article><article><span>03</span><h2>Review the scenario</h2><p>Map source classes to model roles, set the years and coastal parameters, then select an engine.</p></article><article><span>04</span><h2>Run and inspect</h2><p>View annual maps, trajectories, transitions, and metadata in the results folder.</p></article></div></div></section>
+<section id="inputs" class="section tinted"><div class="container split"><div><p class="eyebrow">Input data</p><h2>Start with aligned GeoTIFFs.</h2><p>Land cover stores numeric categories; a DEM provides elevation for the model rules. Raster cells must align. The application can help reproject or align inputs when source grids differ.</p></div><div class="input-list"><div><span>Land cover</span><b>Categorical GeoTIFF</b></div><div><span>Elevation</span><b>DEM · same grid</b></div><div><span>Study-area mask</span><b>Optional GeoTIFF</b></div><div><span>Suitability or soil</span><b>Optional GeoTIFF</b></div><div><span>Other data providers</span><b>Supported when grids align</b></div></div></div></section>
+<section id="engines" class="section"><div class="container"><p class="eyebrow">Processing engines</p><h2>Choose how to process the grid.</h2><div class="engine-grid"><article><span class="engine-mark">Continuous</span><h2>For speed when memory allows</h2><p>Keeps model state in memory and was faster in the recorded one-step benchmark. Check available RAM before using it with a very large raster.</p></article><article><span class="engine-mark">Persistent blocks</span><h2>For capacity and recovery</h2><p>Stores model state in persistent files and processes it in chunks. This can help recover very large runs, with additional disk use and processing time.</p></article></div><p class="benchmark-note">Both engines matched annual states in the controlled 75-step pilot. The archived long-horizon Windows runs used different class mappings, so their times cannot show which engine is faster.</p></div></section>
+<section class="section tinted"><div class="container split"><div><p class="eyebrow">Results</p><h2>Keep the evidence with the maps.</h2><p>A run folder can contain annual state rasters and tables describing model changes and processing time.</p></div><div class="link-list"><a href="benchmarks.html"><span>Annual GeoTIFFs</span><small>One state map per simulated year, when export is enabled</small><b>·</b></a><a href="benchmarks.html"><span>Trajectory and transition tables</span><small>CSV summaries of yearly classes and transitions</small><b>·</b></a><a href="https://github.com/oceanpep/br-mangue-studio/blob/main/docs/REPRODUCIBILITY_AND_BENCHMARKING.md"><span>Run metadata</span><small>Input setup, parameters, timing, and resources</small><b>↗</b></a></div></div></section>
+<section class="section"><div class="container split"><div><p class="eyebrow">User manual</p><h2>Read the complete manual.</h2><p>The Portuguese manual includes screenshots and step-by-step instructions for preparing inputs and using the desktop application.</p><a class="button primary" href="https://raw.githubusercontent.com/oceanpep/br-mangue-studio/main/docs/downloads/Manual_Usuario_BR_MANGUE_Studio_1.0.0.pdf">Download the user manual · PDF</a></div><div class="info-card"><strong>Before interpreting a map</strong><span>Check the inputs and scenario</span><small>Record data sources, class mapping, coordinate reference, years, coastal parameters, and engine. A software test checks computation; it does not establish ecological validity.</small></div></div></section></main>
+<footer class="site-footer"><div class="container footer-wrap"><span>© 2026 BR-MANGUE Studio · Research software by GEOTAM, UFMA</span><span><a href="index.html">Home</a> · <a href="downloads.html">Downloads</a> · <a href="articles.html">Research</a></span></div></footer></body></html>

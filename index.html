@@ -3,119 +3,52 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="BR-MANGUE Studio is desktop research software for exploring mangrove response to sea-level rise with spatial cellular simulations.">
+  <meta name="description" content="BR-MANGUE Studio is desktop software for simulating mangrove change with cellular automata and geospatial raster data.">
   <meta name="theme-color" content="#0d5d4f">
-  <meta property="og:title" content="BR-MANGUE Studio">
-  <meta property="og:description" content="Explore mangrove response to sea-level rise with open, reproducible spatial scenarios.">
-  <meta property="og:type" content="website">
+  <title>BR-MANGUE Studio · Mangrove change modelling</title>
   <link rel="canonical" href="https://oceanpep.github.io/br-mangue-studio-site/">
-  <title>BR-MANGUE Studio · Mangrove modelling</title>
+  <link rel="alternate" hreflang="en" href="https://oceanpep.github.io/br-mangue-studio-site/">
+  <link rel="alternate" hreflang="pt-BR" href="https://oceanpep.github.io/br-mangue-studio-site/pt-br/">
   <link rel="icon" href="assets/BR-MANGUE_BR_icon.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="./" aria-label="BR-MANGUE Studio home">
-        <img src="assets/BR-MANGUE_BR_icon.png" alt="">
-        <span>BR-MANGUE <em>Studio</em></span>
-      </a>
-      <nav aria-label="Primary navigation">
-        <a href="#about">What it does</a>
-        <a href="guide.html">Guide</a>
-        <a href="articles.html">Research</a>
-        <a class="nav-button" href="downloads.html">Download</a>
-      </nav>
-    </div>
-  </header>
-
+  <header class="site-header"><div class="container nav-wrap">
+    <a class="brand" href="index.html"><img src="assets/BR-MANGUE_BR_icon.png" alt=""><span>BR-MANGUE <em>Studio</em></span></a>
+    <nav aria-label="Primary navigation"><a href="#about">Overview</a><a href="guide.html">Guide</a><a href="articles.html">Research</a><a class="nav-button" href="downloads.html">Download</a></nav>
+    <div class="language-switch" aria-label="Choose language"><a href="index.html" aria-current="page" lang="en">EN</a><a href="pt-br/index.html" lang="pt-BR">PT-BR</a></div>
+  </div></header>
   <main id="main">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Open research software · Windows and Linux</p>
-          <h1>Explore how mangroves respond to sea-level rise.</h1>
-          <p class="lead">Run spatial cellular scenarios with land-cover and elevation data. Follow annual change on a map, then inspect the tables behind it.</p>
-          <div class="hero-actions">
-            <a class="button primary" href="downloads/BR-MANGUE_Studio-1.0.0-Windows-x64.exe" download>Download for Windows</a>
-            <a class="button secondary" href="downloads/BRMANGUE_Studio_Linux_x86_64" download>Linux x86_64 preview</a>
-          </div>
-          <p class="version-note">Windows 10/11 · stable 1.0.0 &nbsp;|&nbsp; Linux x86_64 · research preview</p>
-        </div>
-        <div class="hero-side">
-          <figure class="demo-card">
-            <div class="demo-label">A simulation, year by year</div>
-            <img src="assets/coastal-simulation-example.gif" alt="Animated example of annual mangrove state changes in a coastal raster">
-            <figcaption>Illustrative scenario with sample data. It demonstrates the software workflow, not a forecast.</figcaption>
-          </figure>
-        </div>
+    <section class="hero"><div class="container hero-grid">
+      <div><p class="eyebrow">Desktop software for research</p><h1>Explore how mangrove landscapes may change.</h1><p class="lead">BR-MANGUE Studio simulates mangrove transitions over time using cellular automata and geospatial raster data. Build a scenario, run it on your computer, and inspect the results.</p>
+        <div class="hero-actions"><a class="button primary" href="downloads.html">Download the application</a><a class="button secondary" href="guide.html">See how it works</a></div>
+        <p class="version-note">Windows 10/11 · Linux x86_64 preview · Version 1.0.0</p>
       </div>
-    </section>
-
-    <section id="about" class="section">
-      <div class="container">
-        <p class="eyebrow">What it does</p>
-        <h2>From raster data to annual results.</h2>
-        <p class="section-intro">BR-MANGUE Studio brings the input data, model settings, and outputs together in one desktop workflow.</p>
-        <div class="feature-grid">
-          <article><span class="feature-number">01</span><h3>Prepare the grid</h3><p>Load a categorical land-cover GeoTIFF and an aligned elevation GeoTIFF. A suitability layer and study-area mask are optional.</p></article>
-          <article><span class="feature-number">02</span><h3>Set a scenario</h3><p>Map raster classes to model roles, choose the time span and coastal parameters, and select continuous or block processing.</p></article>
-          <article><span class="feature-number">03</span><h3>Inspect every step</h3><p>Review annual maps, trajectories, transitions, figures, and run metadata. Exported files stay on your computer.</p></article>
-        </div>
+      <div class="hero-side"><figure class="demo-card"><p class="demo-label">Example simulation output</p><img src="assets/synthetic-cellular-transition.gif" alt="Synthetic grid illustrating land-cover cells changing through time"><figcaption>A synthetic example, not a geographic study area. Results depend on input data and scenario settings.</figcaption></figure></div>
+    </div></section>
+    <section id="about" class="section"><div class="container">
+      <p class="eyebrow">What it does</p><h2>From raster inputs to annual maps.</h2><p class="section-intro">Prepare two core inputs, define how their classes relate to the model, and run a simulation for the years you choose.</p>
+      <div class="feature-grid">
+        <article><span class="feature-number">01</span><h3>Use your own data</h3><p>Load land-cover categories and a digital elevation model (DEM). Optional masks and suitability layers can refine a scenario.</p></article>
+        <article><span class="feature-number">02</span><h3>Choose a workflow</h3><p>Run the full grid in memory or process it in persistent blocks, depending on available memory and storage.</p></article>
+        <article><span class="feature-number">03</span><h3>Inspect every run</h3><p>Review maps, transition summaries, trajectories, and run metadata saved with your project.</p></article>
       </div>
-    </section>
-
-    <section class="section tinted">
-      <div class="container split">
-        <div>
-          <p class="eyebrow">Get started</p>
-          <h2>Download and open.</h2>
-          <p>The desktop builds include Python and the project's required Python libraries. You do not need to install Python or packages separately. Your land-cover and elevation data are not included.</p>
-          <a class="text-link" href="downloads.html">See system requirements and checksums →</a>
-        </div>
-        <div class="link-list">
-          <a href="downloads.html#windows"><span>Windows 10/11 · 64-bit</span><small>Stable desktop build</small><b>↗</b></a>
-          <a href="downloads.html#linux"><span>Linux · x86_64</span><small>Ubuntu-built research preview</small><b>↗</b></a>
-          <a href="guide.html#workflow"><span>First simulation</span><small>Prepare data and run a scenario</small><b>↗</b></a>
-        </div>
+    </div></section>
+    <section class="section tinted"><div class="container split">
+      <div><p class="eyebrow">Designed for flexible research</p><h2>Bring data that fits your study.</h2><p>BR-MANGUE Studio does not bundle a particular land-cover or elevation dataset. Use suitable geospatial inputs for your study area, coordinate system, resolution, and research question.</p><a class="text-link" href="guide.html">Review input requirements →</a></div>
+      <div class="info-card"><strong>At a glance</strong><span>Local desktop workflow</span><small>The application includes its runtime and required Python libraries. Your input data and results remain in the folders you choose.</small></div>
+    </div></section>
+    <section class="section"><div class="container">
+      <p class="eyebrow">Performance records</p><h2>See what has been measured.</h2><p class="section-intro">Published figures describe specific software runs and hardware. They are not ecological validation or a guarantee of speed on another computer.</p>
+      <div class="benchmark-grid">
+        <article class="benchmark-card"><strong>Large raster · one transition</strong><span>78 million cells</span><small>Continuous: 123.6 s · Persistent blocks: 476.7 s. Outputs matched for this recorded run.</small></article>
+        <article class="benchmark-card"><strong>Long-horizon run · Windows</strong><span>About 4 h each</span><small>Two runs to 2100 exported 76 annual maps each. Settings differed, so this is not a controlled speed comparison.</small></article>
+        <article class="benchmark-card"><strong>Linux pilot · 75 steps</strong><span>2.34 million cells</span><small>Annual maps from both engines matched in the recorded pilot.</small></article>
       </div>
-    </section>
-
-    <section id="evidence" class="section">
-      <div class="container">
-        <p class="eyebrow">Evidence from test runs</p>
-        <h2>Measured on coastal raster data.</h2>
-        <div class="benchmark-grid">
-          <article class="benchmark-card"><strong>Ilha do Maranhão</strong><span>75 annual steps</span><small>Linux pilot from 2025 to 2100. Continuous and block engines matched all annual raster cells for this test. The input raster had no island mask.</small></article>
-          <article class="benchmark-card"><strong>Large CMMA grid</strong><span>78.0 million cells</span><small>One-step run: 123.6 s continuous and 476.7 s in blocks, without annual map export. Both outputs matched in this recorded test.</small></article>
-          <article class="benchmark-card"><strong>Windows · CMMA</strong><span>About 4 h per run</span><small>Each run covered 2024–2100 and saved 76 annual maps. The class mappings differed, so these timings are not a controlled engine comparison.</small></article>
-        </div>
-        <p class="benchmark-note"><a class="text-link" href="articles.html#benchmarks">Read the test records and their limits →</a></p>
-      </div>
-    </section>
-
-    <section class="section tinted">
-      <div class="container split">
-        <div>
-          <p class="eyebrow">Documentation and research</p>
-          <h2>Understand the workflow and the evidence.</h2>
-          <p>Start with the guide, review the benchmark records, or inspect the source code and JOSS-format paper draft.</p>
-        </div>
-        <div class="link-list">
-          <a href="guide.html"><span>Quick-start guide</span><small>Inputs, class mapping, engines, and outputs</small><b>↗</b></a>
-          <a href="articles.html#benchmarks"><span>Benchmark records</span><small>Linux parity and Windows long-run measurements</small><b>↗</b></a>
-          <a href="https://github.com/oceanpep/br-mangue-studio"><span>Source code</span><small>License, citation, issues, and contributions</small><b>↗</b></a>
-        </div>
-      </div>
-    </section>
+      <p class="benchmark-note"><a class="text-link" href="benchmarks.html">Read methods and limitations →</a></p>
+    </div></section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container footer-wrap">
-      <span>© 2026 BR-MANGUE Studio · Research software by GEOTAM, UFMA</span>
-      <span><a href="downloads.html">Downloads</a> · <a href="guide.html">Guide</a> · <a href="articles.html">Research</a> · <a href="projects.html">Project status</a> · <a href="https://github.com/oceanpep/br-mangue-studio">GitHub</a></span>
-    </div>
-  </footer>
+  <footer class="site-footer"><div class="container footer-wrap"><span>© 2026 BR-MANGUE Studio · Research software by GEOTAM, UFMA</span><span><a href="downloads.html">Downloads</a> · <a href="guide.html">Guide</a> · <a href="articles.html">Research</a></span></div></footer>
 </body>
 </html>
