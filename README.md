@@ -9,7 +9,7 @@ The site uses static HTML and CSS, has no build step, and provides English and B
 English pages are in the repository root; their Portuguese versions are in `pt-br/`.
 
 - `index.html` — project overview and performance summary
-- `downloads.html` — downloads, platform requirements, and checksums
+- `downloads.html` — application downloads, sample dataset, platform requirements, and checksums
 - `guide.html` — input preparation and simulation workflow
 - `articles.html` — published scientific background and software test records
 - `benchmarks.html` — measured performance, methods, and limitations
@@ -29,7 +29,7 @@ Then open `http://localhost:8000` in a browser. The Portuguese version is at `/p
 
 ## Update a download
 
-Keep the download link, displayed file size, and SHA-256 checksum in `downloads.html` and `pt-br/downloads.html` in sync with the files in `downloads/`. Recalculate and verify each checksum after replacing an executable. Do not add research rasters, personal files, or unpublished results to this public repository.
+Keep download links, displayed file sizes, and SHA-256 checksums in both language versions in sync with `downloads/`. Recalculate and verify checksums after replacing a file. Sample data must include source attribution and license information; do not add personal files or unpublished results to this public repository.
 
 ## Publishing
 
