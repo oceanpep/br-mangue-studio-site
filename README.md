@@ -11,6 +11,7 @@ English pages are in the repository root; their Portuguese versions are in `pt-b
 - `index.html` — project overview and performance summary
 - `downloads.html` — application downloads, sample dataset, platform requirements, and checksums
 - `guide.html` — input preparation and simulation workflow
+- `sea-level-trajectories.html` — CSV format, spreadsheet instructions, official projection sources, and downloadable synthetic example
 - `articles.html` — published scientific background and software test records
 - `benchmarks.html` — measured performance, methods, and limitations
 - `projects.html` — current release and platform status
