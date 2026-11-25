@@ -1,10 +1,73 @@
 <!doctype html>
-<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Prepare rasters, configure um cenário e examine os resultados anuais no BR-MANGUE Studio."><meta name="theme-color" content="#0d5d4f"><title>Guia rápido · BR-MANGUE Studio</title><link rel="canonical" href="https://oceanpep.github.io/br-mangue-studio-site/pt-br/guide.html"><link rel="alternate" hreflang="en" href="https://oceanpep.github.io/br-mangue-studio-site/guide.html"><link rel="alternate" hreflang="pt-BR" href="https://oceanpep.github.io/br-mangue-studio-site/pt-br/guide.html"><link rel="icon" href="../assets/BR-MANGUE_BR_icon.png" type="image/png"><link rel="stylesheet" href="../styles.css?v=1.4.0"></head><body>
-<a class="skip-link" href="#main">Pular para o guia</a><header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><img src="../assets/BR-MANGUE_BR_icon.png" alt=""><span>BR-MANGUE <em>Studio</em></span></a><nav aria-label="Navegação principal"><a href="index.html#about">Visão geral</a><a href="guide.html" aria-current="page">Guia</a><a href="articles.html">Pesquisa</a><a class="nav-button" href="downloads.html">Baixar</a></nav><div class="language-switch" aria-label="Escolha o idioma"><a href="../guide.html" lang="en">EN</a><a href="guide.html" aria-current="page" lang="pt-BR">PT-BR</a></div></div></header>
-<main id="main"><section class="page-hero"><div class="container page-hero-grid"><div><p class="eyebrow">Guia rápido</p><h1>Prepare os dados. Execute um cenário. Examine os resultados.</h1><p class="page-lead">O fluxo principal de trabalho no BR-MANGUE Studio, explicado em quatro etapas.</p></div><div class="page-hero-badge guide-badge"><span>Comece aqui</span><b>4 etapas</b><small>Projeto · Entradas · Cenário · Resultados</small></div></div></section>
-<section id="workflow" class="section"><div class="container"><div class="step-grid"><article><span>01</span><h2>Crie um projeto</h2><p>Escolha uma pasta para o projeto e outra, com espaço suficiente, para os resultados.</p></article><article><span>02</span><h2>Carregue dois rasters</h2><p>Selecione a cobertura da terra e um modelo digital de elevação (DEM) com a mesma grade, extensão, resolução e sistema de coordenadas.</p></article><article><span>03</span><h2>Revise o cenário</h2><p>Escolha o mapeamento padrão ou defina suas próprias classes. O modo personalizado começa vazio, oculta as classes padrão e exige que cada código do raster seja associado a uma classe e perfil de comportamento ou explicitamente excluído.</p></article><article><span>04</span><h2>Execute e confira</h2><p>Consulte mapas anuais, trajetórias, transições e metadados na pasta de resultados.</p></article></div></div></section>
-<section id="inputs" class="section tinted"><div class="container split"><div><p class="eyebrow">Dados de entrada</p><h2>Comece com GeoTIFFs alinhados.</h2><p>A cobertura da terra contém categorias numéricas; o DEM fornece a elevação usada pelas regras do modelo. As células dos rasters precisam coincidir. Se as grades de origem forem diferentes, o programa pode ajudar a reprojetar ou alinhar os dados.</p></div><div class="input-list"><div><span>Cobertura da terra</span><b>GeoTIFF categórico</b></div><div><span>Elevação</span><b>DEM · mesma grade</b></div><div><span>Máscara da área de estudo</span><b>GeoTIFF opcional</b></div><div><span>Adequabilidade ou solo</span><b>GeoTIFF opcional</b></div><div><span>Outros provedores de dados</span><b>Compatíveis se as grades coincidirem</b></div></div></div></section>
-<section id="engines" class="section"><div class="container"><p class="eyebrow">Mecanismos de processamento</p><h2>Escolha como processar a grade.</h2><div class="engine-grid"><article><span class="engine-mark">Contínuo</span><h2>Mais rápido quando há memória disponível</h2><p>Mantém o estado do modelo na memória e foi mais rápido no teste de uma transição. Confira a memória RAM disponível antes de usá-lo com rasters muito grandes.</p></article><article><span class="engine-mark">Blocos persistentes</span><h2>Para capacidade e recuperação</h2><p>Salva o estado do modelo em arquivos persistentes e processa os dados em blocos. Isso pode facilitar a recuperação de execuções grandes, mas usa mais disco e tempo.</p></article></div><p class="benchmark-note">Os dois mecanismos produziram os mesmos estados anuais no teste controlado de 75 etapas. As execuções longas arquivadas no Windows usaram associações de classes diferentes e, por isso, seus tempos não indicam qual mecanismo é mais rápido.</p></div></section>
-<section class="section tinted"><div class="container split"><div><p class="eyebrow">Resultados</p><h2>Guarde as evidências junto aos mapas.</h2><p>A pasta de execução pode conter rasters anuais e tabelas que descrevem as mudanças calculadas e o tempo de processamento.</p></div><div class="link-list"><a href="benchmarks.html"><span>GeoTIFFs anuais</span><small>Um mapa do estado por ano simulado, se a exportação estiver habilitada</small><b>·</b></a><a href="benchmarks.html"><span>Tabelas de trajetórias e transições</span><small>Resumos CSV das classes e transições anuais</small><b>·</b></a><a href="https://github.com/oceanpep/br-mangue-studio/blob/main/docs/REPRODUCIBILITY_AND_BENCHMARKING.md"><span>Metadados da execução</span><small>Dados de entrada, parâmetros, tempo e recursos</small><b>↗</b></a></div></div></section>
-<section class="section"><div class="container split"><div><p class="eyebrow">Manual do usuário</p><h2>Consulte o manual completo.</h2><p>O manual em português traz capturas de tela e instruções detalhadas para preparar as entradas e usar o aplicativo.</p><a class="button primary" href="https://raw.githubusercontent.com/oceanpep/br-mangue-studio/main/docs/downloads/Manual_Usuario_BR_MANGUE_Studio_1.0.0.pdf">Baixar o manual do usuário · PDF</a></div><div class="info-card"><strong>Antes de interpretar um mapa</strong><span>Confira os dados e o cenário</span><small>Registre as fontes de dados, associações de classes, sistema de coordenadas, anos, parâmetros costeiros e mecanismo usado. Um teste de software verifica o cálculo, não a validade ecológica.</small></div></div></section><section class="section tinted" id="sea-level-trajectories"><div class="container split"><div><p class="eyebrow">Cenários de elevação do mar</p><h2>Importe uma trajetória projetada.</h2><p>Escolha uma taxa anual constante ou um CSV com níveis acumulados. O guia explica onde obter as projeções e como preparar as duas colunas exigidas.</p><a class="button primary" href="sea-level-trajectories.html">Formato CSV e fontes de dados</a></div><div class="info-card"><strong>Exemplo + instruções</strong><span>year · sea_level_mm</span><small>Valores sintéticos para conhecer o formato</small><a href="../downloads/Sea_level_trajectory_example.zip" download>Baixar o exemplo CSV</a></div></div></section></main>
-<footer class="site-footer"><div class="container footer-wrap"><span>© 2026 BR-MANGUE Studio · Software de pesquisa do GEOTAM, UFMA</span><span><a href="index.html">Início</a> · <a href="downloads.html">Downloads</a> · <a href="articles.html">Pesquisa</a></span></div></footer></body></html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Conheça o fluxo de trabalho do BR-MANGUE Studio, os dados de entrada, as configurações e os arquivos de saída.">
+  <meta name="theme-color" content="#f5f8f6">
+  <title>Documentação · BR-MANGUE Studio</title>
+  <link rel="canonical" href="https://oceanpep.github.io/br-mangue-studio-site/pt-br/guide.html">
+  <link rel="alternate" hreflang="en" href="https://oceanpep.github.io/br-mangue-studio-site/guide.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://oceanpep.github.io/br-mangue-studio-site/pt-br/guide.html">
+  <link rel="icon" href="../assets/BR-MANGUE_BR_icon.png" type="image/png">
+  <link rel="stylesheet" href="../styles.css?v=1.4.7">
+</head>
+<body>
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+  <header class="site-header"><div class="container nav-wrap">
+    <a class="brand" href="index.html" aria-label="Página inicial do BR-MANGUE Studio"><img src="../assets/BR-MANGUE_BR_icon.png" alt=""><span>BR-MANGUE <em>Studio</em></span></a>
+    <nav aria-label="Navegação principal"><a href="index.html">Visão geral</a><a href="guide.html" aria-current="page">Documentação</a><a href="downloads.html" class="nav-button">Baixar</a></nav>
+    <div class="language-switch" aria-label="Escolha o idioma"><a href="../guide.html" lang="en">EN</a><a href="guide.html" aria-current="page" lang="pt-BR">PT-BR</a></div>
+  </div></header>
+  <main id="main">
+    <section class="page-hero"><div class="container">
+      <p class="eyebrow">Documentação</p>
+      <h1>Prepare os dados. Execute um cenário. Confira os resultados.</h1>
+      <p class="page-lead">Um guia breve do fluxo principal do BR-MANGUE Studio, dos rasters alinhados às saídas anuais.</p>
+    </div></section>
+    <section class="section"><div class="container">
+      <p class="eyebrow">Fluxo de trabalho</p><h2>Quatro etapas do projeto aos resultados.</h2>
+      <div class="step-grid product-steps">
+        <article><span>01</span><h2>Crie um projeto</h2><p>Escolha uma pasta para o projeto e um destino com espaço suficiente para os resultados.</p></article>
+        <article><span>02</span><h2>Carregue os dados</h2><p>Selecione um raster categórico de cobertura da terra e um raster de elevação com grade, extensão e sistema de coordenadas compatíveis.</p></article>
+        <article><span>03</span><h2>Configure o cenário</h2><p>Associe as classes originais aos estados do modelo, escolha os anos e a forçante do nível do mar e defina o processamento.</p></article>
+        <article><span>04</span><h2>Execute e confira</h2><p>Examine mapas anuais, trajetórias, transições e metadados na pasta de resultados.</p></article>
+      </div>
+    </div></section>
+    <section class="section tinted"><div class="container guide-columns">
+      <div><p class="eyebrow">Dados de entrada</p><h2>O que o modelo lê.</h2><p>Os rasters necessários são GeoTIFFs em uma grade compatível. Prepare resolução, extensão e sistema de coordenadas coincidentes antes de carregar os arquivos.</p></div>
+      <div class="guide-points">
+        <div><b>Cobertura da terra · obrigatória</b><span>Raster categórico. Associe cada código original a uma classe do modelo ou exclua-o explicitamente.</span></div>
+        <div><b>Elevação · obrigatória</b><span>Modelo digital de elevação usado pelas regras do modelo. Registre a fonte e o datum vertical.</span></div>
+        <div><b>Máscara da área de estudo · opcional</b><span>Limita o processamento às células selecionadas.</span></div>
+        <div><b>Camada de adequabilidade · opcional</b><span>Use quando o cenário estiver configurado para aplicar essa entrada.</span></div>
+      </div>
+    </div></section>
+    <section class="section"><div class="container guide-columns">
+      <div><p class="eyebrow">Configuração do cenário</p><h2>Escolha como a execução avança.</h2><p>A aba Simulação define os anos, a forçante costeira e o mecanismo de processamento. Guarde essas escolhas junto das fontes de dados e das citações do estudo.</p></div>
+      <div class="guide-points">
+        <div><b>Classes</b><span>Use o mapeamento padrão ou defina classes e perfis de comportamento. O modo personalizado começa vazio.</span></div>
+        <div><b>Forçante do nível do mar</b><span>Informe uma taxa anual constante ou importe níveis acumulados de uma trajetória CSV.</span></div>
+        <div><b>Mecanismo contínuo</b><span>Mantém os estados do modelo na memória. Considere a RAM disponível para grades extensas.</span></div>
+        <div><b>Mecanismo por blocos persistentes</b><span>Processa a grade em blocos e armazena os estados em disco, exigindo espaço e tempo adicionais.</span></div>
+      </div>
+    </div></section>
+    <section class="section tinted" id="results"><div class="container guide-columns">
+      <div><p class="eyebrow">Saídas</p><h2>Arquivos para conferir e guardar.</h2><p>As opções de saída dependem da configuração da execução. Preserve o projeto, as fontes das entradas e os metadados junto aos resultados.</p></div>
+      <div class="guide-points">
+        <div><b>Mapas anuais</b><span>GeoTIFFs dos anos simulados quando a exportação anual estiver ativada.</span></div>
+        <div><b>Tabelas de trajetórias e transições</b><span>Resumos CSV das classes e mudanças ao longo do tempo.</span></div>
+        <div><b>Registro da execução</b><span>Configuração, tempo de processamento e informações de recursos disponíveis para aquela execução.</span></div>
+      </div>
+    </div></section>
+    <section class="section"><div class="container documentation-links">
+      <a class="documentation-link" href="sea-level-trajectories.html"><span>Forçante do nível do mar</span><strong>Formato CSV e fontes de dados</strong><small>Colunas exigidas, unidades, interpolação e arquivo de exemplo</small><b aria-hidden="true">→</b></a>
+      <a class="documentation-link" href="benchmarks.html"><span>Verificações do software</span><strong>Registros de desempenho</strong><small>Configurações, medições e limites de interpretação</small><b aria-hidden="true">→</b></a>
+      <a class="documentation-link" href="articles.html"><span>Base científica</span><strong>Referências e atribuição do modelo</strong><small>Contexto publicado, registros de pesquisa e informações de citação</small><b aria-hidden="true">→</b></a>
+    </div></section>
+    <section class="section tinted"><div class="container product-manual"><div><p class="eyebrow">Instruções completas</p><h2>Consulte o manual do usuário.</h2><p>O manual traz capturas de tela e instruções detalhadas para preparar as entradas e usar o aplicativo.</p></div><a class="button secondary" href="https://raw.githubusercontent.com/oceanpep/br-mangue-studio/main/docs/downloads/Manual_Usuario_BR_MANGUE_Studio_1.0.0.pdf">Abrir o manual do usuário · PDF</a></div></section>
+    <section class="section"><div class="container product-note"><strong>Interpretação:</strong> um teste de software verifica a execução computacional registrada. Por si só, não estabelece validade ecológica nem precisão preditiva.</div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-wrap"><span>BR-MANGUE Studio · Software de pesquisa do GEOTAM, UFMA</span><span><a href="downloads.html">Downloads</a> · <a href="https://github.com/oceanpep/br-mangue-studio">Código-fonte</a> · <a href="mailto:pepocean@gmail.com">Suporte</a></span></div></footer>
+</body>
+</html>

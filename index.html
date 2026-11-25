@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="BR-MANGUE Studio is desktop software for simulating mangrove change with cellular automata and geospatial raster data.">
-  <meta name="theme-color" content="#0d5d4f">
+  <meta name="description" content="BR-MANGUE Studio is free desktop software for exploring mangrove change with spatial cellular automata and geospatial raster data.">
+  <meta name="theme-color" content="#f5f8f6">
   <title>BR-MANGUE Studio · Mangrove change modelling</title>
   <link rel="canonical" href="https://oceanpep.github.io/br-mangue-studio-site/">
   <link rel="alternate" hreflang="en" href="https://oceanpep.github.io/br-mangue-studio-site/">
@@ -14,41 +14,104 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header"><div class="container nav-wrap">
-    <a class="brand" href="index.html"><img src="assets/BR-MANGUE_BR_icon.png" alt=""><span>BR-MANGUE <em>Studio</em></span></a>
-    <nav aria-label="Primary navigation"><a href="#about">Overview</a><a href="guide.html">Guide</a><a href="articles.html">Research</a><a class="nav-button" href="downloads.html">Download</a></nav>
-    <div class="language-switch" aria-label="Choose language"><a href="index.html" aria-current="page" lang="en">EN</a><a href="pt-br/index.html" lang="pt-BR">PT-BR</a></div>
-  </div></header>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="BR-MANGUE Studio home"><img src="assets/BR-MANGUE_BR_icon.png" alt=""><span>BR-MANGUE <em>Studio</em></span></a>
+      <nav aria-label="Main navigation">
+        <a href="#overview" aria-current="page">Overview</a>
+        <a href="guide.html">Documentation</a>
+        <a class="nav-button" href="downloads.html">Download</a>
+      </nav>
+      <div class="language-switch" aria-label="Choose language"><a href="index.html" aria-current="page" lang="en">EN</a><a href="pt-br/index.html" lang="pt-BR">PT-BR</a></div>
+    </div>
+  </header>
   <main id="main">
-    <section class="hero"><div class="container hero-grid">
-      <div><p class="eyebrow">Desktop software for research</p><h1>Explore how mangrove landscapes may change.</h1><p class="lead">BR-MANGUE Studio simulates mangrove transitions over time using cellular automata and geospatial raster data. Build a scenario, run it on your computer, and inspect the results.</p>
-        <div class="hero-actions"><a class="button primary" href="downloads.html">Download the application</a><a class="button secondary" href="guide.html">See how it works</a></div>
-        <p class="version-note">Windows 10/11 · Linux x86_64 preview · Version 1.4.7 · English and Portuguese (Brazil)</p>
+    <section class="hero product-hero" id="overview">
+      <div class="container hero-grid product-hero-grid">
+        <div>
+          <p class="eyebrow">Open-source research software</p>
+          <h1>Explore how mangrove landscapes may change.</h1>
+          <p class="lead">BR-MANGUE Studio is a desktop application for running spatial cellular-automaton scenarios with land-cover and elevation data you provide.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="downloads.html">Download BR-MANGUE Studio</a>
+            <a class="button secondary" href="guide.html">See how it works</a>
+          </div>
+          <ul class="hero-meta" aria-label="Application details">
+            <li>Version 1.4.7</li>
+            <li>Windows 10/11</li>
+            <li>Linux x86_64 preview</li>
+            <li>English and Brazilian Portuguese</li>
+          </ul>
+        </div>
+        <figure class="hero-demo">
+          <img src="assets/synthetic-cellular-transition.gif" alt="Animated synthetic grid showing mangrove, water, natural vegetation, and developed cells changing over time">
+          <figcaption><strong>Illustrative cellular transition</strong><span>Synthetic grid · 504 cells · 5 active states. This animation explains the cell logic; it is not a geographic simulation result.</span></figcaption>
+        </figure>
       </div>
-      <div class="hero-side"><figure class="demo-card"><p class="demo-label">Example simulation output</p><img src="assets/synthetic-cellular-transition.gif" alt="Synthetic grid illustrating land-cover cells changing through time"><figcaption>A synthetic example, not a geographic study area. Results depend on input data and scenario settings.</figcaption></figure></div>
-    </div></section>
-    <section id="about" class="section"><div class="container">
-      <p class="eyebrow">What it does</p><h2>From raster inputs to annual maps.</h2><p class="section-intro">Prepare two core inputs, define how their classes relate to the model, and run a simulation for the years you choose.</p>
-      <div class="feature-grid">
-        <article><span class="feature-number">01</span><h3>Use your own data</h3><p>Load land-cover categories and a digital elevation model (DEM). Optional masks and suitability layers can refine a scenario.</p></article>
-        <article><span class="feature-number">02</span><h3>Choose a workflow</h3><p>Run the full grid in memory or process it in persistent blocks, depending on available memory and storage.</p></article>
-        <article><span class="feature-number">03</span><h3>Inspect every run</h3><p>Review maps, transition summaries, trajectories, and run metadata saved with your project.</p></article>
+    </section>
+
+    <section class="section" id="capabilities">
+      <div class="container">
+        <p class="eyebrow">What you can do</p>
+        <h2>Build a scenario from your own spatial data.</h2>
+        <p class="section-intro">The application brings data setup, model settings, processing, and results into one desktop workspace.</p>
+        <div class="feature-grid product-features">
+          <article><span class="feature-number">01</span><h3>Prepare the inputs</h3><p>Load a categorical land-cover raster and a digital elevation model on the same grid. A study-area mask and suitability layer are optional.</p></article>
+          <article><span class="feature-number">02</span><h3>Set the model scenario</h3><p>Map source classes to model states, choose the simulation years, and configure sea-level forcing and other model parameters.</p></article>
+          <article><span class="feature-number">03</span><h3>Review the outputs</h3><p>Inspect annual maps, trajectories, class transitions, and run metadata saved with the project.</p></article>
+        </div>
       </div>
-    </div></section>
-    <section class="section tinted"><div class="container split">
-      <div><p class="eyebrow">Designed for flexible research</p><h2>Bring data that fits your study.</h2><p>BR-MANGUE Studio does not bundle a particular land-cover or elevation dataset. Use suitable geospatial inputs for your study area, coordinate system, resolution, and research question.</p><a class="text-link" href="guide.html">Review input requirements →</a></div>
-      <div class="info-card"><strong>At a glance</strong><span>Local desktop workflow</span><small>The application includes its runtime and required Python libraries. Your input data and results remain in the folders you choose.</small></div>
-    </div></section>
-    <section class="section"><div class="container">
-      <p class="eyebrow">Performance records</p><h2>See what has been measured.</h2><p class="section-intro">Published figures describe specific software runs and hardware. They are not ecological validation or a guarantee of speed on another computer.</p>
-      <div class="benchmark-grid">
-        <article class="benchmark-card"><strong>Large raster · one transition</strong><span>78 million cells</span><small>Continuous: 123.6 s · Persistent blocks: 476.7 s. Outputs matched for this recorded run.</small></article>
-        <article class="benchmark-card"><strong>Long-horizon run · Windows</strong><span>About 4 h each</span><small>Two runs to 2100 exported 76 annual maps each. Settings differed, so this is not a controlled speed comparison.</small></article>
-        <article class="benchmark-card"><strong>Linux pilot · 75 steps</strong><span>2.34 million cells</span><small>Annual maps from both engines matched in the recorded pilot.</small></article>
+    </section>
+
+    <section class="section tinted" id="workflow">
+      <div class="container">
+        <p class="eyebrow">A simple workflow</p>
+        <h2>From aligned rasters to annual results.</h2>
+        <div class="step-grid product-steps">
+          <article><span>01</span><h2>Add the data</h2><p>Select land-cover and elevation GeoTIFFs with matching extent, resolution, and coordinate system.</p></article>
+          <article><span>02</span><h2>Map the classes</h2><p>Assign each source category to a model state or exclude it from the scenario.</p></article>
+          <article><span>03</span><h2>Choose the forcing</h2><p>Set years and use a constant rate or a calendar-based sea-level trajectory.</p></article>
+          <article><span>04</span><h2>Run and inspect</h2><p>Compare yearly maps and tables, then keep the run metadata with the outputs.</p></article>
+        </div>
       </div>
-      <p class="benchmark-note"><a class="text-link" href="benchmarks.html">Read methods and limitations →</a></p>
-    </div></section>
+    </section>
+
+    <section class="section" id="outputs">
+      <div class="container split product-output">
+        <div>
+          <p class="eyebrow">Research workflow</p>
+          <h2>Keep the data and results together.</h2>
+          <p>Each run works with user-provided inputs and writes its outputs to the selected project folder. Input rasters remain unchanged.</p>
+          <a class="text-link" href="guide.html#results">See the output files →</a>
+        </div>
+        <ul class="output-list">
+          <li><strong>Annual state maps</strong><span>GeoTIFF outputs for the simulated years</span></li>
+          <li><strong>Trajectories and transitions</strong><span>Tables summarizing changes through time</span></li>
+          <li><strong>Run metadata</strong><span>Inputs, model settings, processing time, and resource records</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section tinted" id="resources">
+      <div class="container">
+        <p class="eyebrow">Learn more</p>
+        <h2>Find the details for your next step.</h2>
+        <div class="resource-grid">
+          <a class="resource-card" href="guide.html"><span>Documentation</span><strong>Prepare inputs and run a scenario</strong><small>Workflow, accepted rasters, and processing options</small><b aria-hidden="true">→</b></a>
+          <a class="resource-card" href="sea-level-trajectories.html"><span>Sea-level data</span><strong>Prepare a trajectory CSV</strong><small>Required columns, units, and projection sources</small><b aria-hidden="true">→</b></a>
+          <a class="resource-card" href="benchmarks.html"><span>Methods and evidence</span><strong>Review recorded software runs</strong><small>Benchmarks and their interpretation limits</small><b aria-hidden="true">→</b></a>
+        </div>
+        <p class="research-note">The model's scientific basis and software attribution are documented in the <a href="articles.html">research and citation page</a> and in the <a href="https://github.com/oceanpep/br-mangue-studio">source repository</a>.</p>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container final-cta-wrap">
+        <div><p class="eyebrow">Free and open source</p><h2>Start with BR-MANGUE Studio.</h2><p>Choose the desktop package for your operating system and review its requirements.</p></div>
+        <a class="button primary" href="downloads.html">Get version 1.4.7</a>
+      </div>
+    </section>
   </main>
-  <footer class="site-footer"><div class="container footer-wrap"><span>© 2026 BR-MANGUE Studio · Research software by GEOTAM, UFMA</span><span><a href="downloads.html">Downloads</a> · <a href="guide.html">Guide</a> · <a href="articles.html">Research</a></span></div></footer>
+  <footer class="site-footer"><div class="container footer-wrap"><span>BR-MANGUE Studio · Research software by GEOTAM, UFMA</span><span><a href="guide.html">Documentation</a> · <a href="downloads.html">Downloads</a> · <a href="https://github.com/oceanpep/br-mangue-studio">Source code</a> · <a href="https://doi.org/10.5281/zenodo.23509308">Citation</a></span></div></footer>
 </body>
 </html>
