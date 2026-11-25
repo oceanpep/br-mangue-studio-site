@@ -207,15 +207,12 @@ body { color: var(--ink); background: #fff; }
 
 .hero.product-hero { padding: 56px 0; background: #f4f7f5; }
 .hero.product-hero::before, .hero.product-hero::after, .page-hero::after { display: none; animation: none; }
-.product-hero-grid { grid-template-columns: minmax(0, 1fr) minmax(340px, 1fr); gap: 48px; }
+.product-hero-grid { grid-template-columns: minmax(0, 1fr); gap: 0; }
+.product-hero-grid > div { max-width: 820px; }
 .hero h1, .page-hero h1, h2, h3 { letter-spacing: -.025em; }
 .hero h1 { max-width: 620px; margin-bottom: 16px; font-size: clamp(40px, 4.6vw, 58px); line-height: 1.08; }
 .lead { max-width: 610px; color: var(--ink-soft); font-size: 18px; line-height: 1.55; }
 .eyebrow { margin-bottom: 12px; color: var(--blue-deep); font-size: 11px; letter-spacing: .13em; }
-.hero-demo { overflow: hidden; margin: 0; border: 1px solid var(--line); border-radius: 8px; background: #fff; box-shadow: var(--shadow-soft); }
-.hero-demo img { display: block; width: 100%; height: auto; }
-.hero-demo figcaption { display: grid; gap: 3px; padding: 12px 15px; color: var(--muted); font-size: 12px; line-height: 1.45; }
-.hero-demo figcaption strong { color: var(--ink-soft); font-size: 13px; }
 .hero-meta { display: flex; flex-wrap: wrap; gap: 8px 16px; margin: 24px 0 0; padding: 0; list-style: none; }
 .hero-meta li { padding-left: 9px; color: var(--muted); border-left: 2px solid #82b19e; font-size: 12px; line-height: 1.35; }
 .hero-actions { margin: 24px 0 0; }
@@ -282,7 +279,6 @@ body { color: var(--ink); background: #fff; }
 
 @media (max-width: 900px) {
   .product-hero-grid { grid-template-columns: 1fr; gap: 28px; }
-  .hero-demo { max-width: 650px; }
   .resource-grid { grid-template-columns: 1fr; }
   .product-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
