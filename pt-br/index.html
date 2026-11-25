@@ -3,111 +3,47 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="BR-MANGUE Studio é um programa gratuito e aberto para computador que explora mudanças em manguezais com autômatos celulares espaciais e dados raster geoespaciais.">
-  <meta name="theme-color" content="#f5f8f6">
-  <title>BR-MANGUE Studio · Modelagem de mudanças em manguezais</title>
+  <meta name="description" content="BR-MANGUE Studio é um programa livre para modelagem espacial de manguezais.">
+  <meta name="theme-color" content="#ffffff">
+  <title>BR-MANGUE Studio · Visão geral</title>
   <link rel="canonical" href="https://oceanpep.github.io/br-mangue-studio-site/pt-br/">
   <link rel="alternate" hreflang="en" href="https://oceanpep.github.io/br-mangue-studio-site/">
   <link rel="alternate" hreflang="pt-BR" href="https://oceanpep.github.io/br-mangue-studio-site/pt-br/">
   <link rel="icon" href="../assets/BR-MANGUE_BR_icon.png" type="image/png">
-  <link rel="stylesheet" href="../styles.css?v=2026-11-25">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400..700&amp;family=Source+Code+Pro:wght@400..600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css?v=2026-11-25c">
 </head>
 <body>
   <a class="skip-link" href="#main">Pular para o conteúdo</a>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html" aria-label="Página inicial do BR-MANGUE Studio"><img src="../assets/BR-MANGUE_BR_icon.png" alt=""><span>BR-MANGUE <em>Studio</em></span></a>
-      <nav aria-label="Navegação principal">
-        <a href="#overview" aria-current="page">Visão geral</a>
-        <a href="guide.html">Documentação</a>
-        <a class="nav-button" href="downloads.html">Baixar</a>
-      </nav>
-      <div class="language-switch" aria-label="Escolher idioma"><a href="../index.html" lang="en">EN</a><a href="index.html" aria-current="page" lang="pt-BR">PT-BR</a></div>
-    </div>
-  </header>
+  <header class="site-header"><div class="container nav-wrap">
+    <a class="brand" href="index.html" aria-label="Página inicial do BR-MANGUE Studio"><img src="../assets/BR-MANGUE_BR_icon.png" alt=""><span>BR-MANGUE <em>Studio</em></span></a>
+    <nav aria-label="Navegação principal"><a href="index.html" aria-current="page">Visão geral</a><a href="https://github.com/oceanpep/br-mangue-studio/blob/main/docs/MODEL_DOCUMENTATION_PT.md" target="_blank" rel="noopener">Documentação</a><a href="downloads.html" class="nav-button">Baixar</a></nav>
+    <div class="language-switch" aria-label="Escolher idioma"><a href="../index.html" lang="en">EN</a><a href="index.html" aria-current="page" lang="pt-BR">PT-BR</a></div>
+  </div></header>
   <main id="main">
-    <section class="hero product-hero" id="overview">
-      <div class="container hero-grid product-hero-grid">
-        <div>
-          <p class="eyebrow">Software de pesquisa · Livre e aberto</p>
-          <h1>Explore como as paisagens de manguezal podem mudar.</h1>
-          <p class="lead">O BR-MANGUE Studio é um programa para computador que executa cenários espaciais com autômatos celulares e dados de cobertura da terra e elevação fornecidos pelo usuário.</p>
-          <div class="hero-actions">
-            <a class="button primary" href="downloads.html">Baixar o BR-MANGUE Studio</a>
-            <a class="button secondary" href="guide.html">Como funciona</a>
-          </div>
-          <ul class="hero-meta" aria-label="Informações do programa">
-            <li>Versão 1.4.8</li>
-            <li>Windows 10/11</li>
-            <li>Linux x86_64 em versão de testes</li>
-            <li>Inglês e português do Brasil</li>
-          </ul>
-        </div>
+    <section class="hero product-hero" id="overview"><div class="container home-layout">
+      <div class="home-copy">
+        <p class="eyebrow">Software de pesquisa · Livre e aberto</p>
+        <h1>BR-MANGUE Studio</h1>
+        <p class="lead">Explore como as paisagens de manguezal podem responder à elevação do nível do mar.</p>
+        <p class="home-description">Um programa para computador que aplica autômatos celulares espaciais a dados de cobertura da terra e elevação fornecidos pelo pesquisador.</p>
+        <div class="hero-actions"><a class="button primary" href="downloads.html">Baixar</a><a class="button secondary" href="https://github.com/oceanpep/br-mangue-studio/blob/main/docs/MODEL_DOCUMENTATION_PT.md" target="_blank" rel="noopener">Documentação</a></div>
+        <p class="version-note">Versão 1.4.9 · Windows 10/11 · Linux x86_64 · Inglês e português do Brasil</p>
       </div>
-    </section>
-
-    <section class="section" id="capabilities">
-      <div class="container">
-        <p class="eyebrow">O que você pode fazer</p>
-        <h2>Monte cenários com seus próprios dados espaciais.</h2>
-        <p class="section-intro">O programa reúne preparação dos dados, configuração do modelo, processamento e análise dos resultados em um só ambiente.</p>
-        <div class="feature-grid product-features">
-          <article><span class="feature-number">01</span><h3>Prepare as entradas</h3><p>Carregue um raster categórico de cobertura da terra e um modelo digital de elevação alinhados. Máscara da área de estudo e raster de adequabilidade são opcionais.</p></article>
-          <article><span class="feature-number">02</span><h3>Defina o cenário</h3><p>Associe as classes de origem aos estados do modelo, escolha o período da simulação e configure a forçante do nível do mar e os demais parâmetros.</p></article>
-          <article><span class="feature-number">03</span><h3>Examine as saídas</h3><p>Consulte mapas anuais, trajetórias, transições entre classes e metadados salvos com o projeto.</p></article>
-        </div>
+      <figure class="home-screenshot"><img src="../assets/BR-MANGUE_STUDIO_preview_original.png" alt="Logomarca do BR-MANGUE Studio"><figcaption>BR-MANGUE Studio</figcaption></figure>
+    </div></section>
+    <section class="section home-summary"><div class="container">
+      <h2>Dos dados espaciais aos mapas anuais.</h2>
+      <p class="section-intro">Carregue rasters alinhados de cobertura da terra e elevação, associe suas classes aos estados do modelo, configure um cenário e examine os resultados.</p>
+      <div class="feature-grid home-features">
+        <article><h3>Dados de entrada</h3><p>Use seus próprios GeoTIFFs categóricos de cobertura da terra e elevação. Máscara da área e legenda de nomes das classes são opcionais.</p></article>
+        <article><h3>Simulação</h3><p>Defina o período, a forçante do nível do mar, a influência da maré, a acreção e as opções de migração.</p></article>
+        <article><h3>Resultados</h3><p>Examine mapas anuais dos estados, transições entre classes, trajetórias e metadados da execução.</p></article>
       </div>
-    </section>
-
-    <section class="section tinted" id="workflow">
-      <div class="container">
-        <p class="eyebrow">Um fluxo direto</p>
-        <h2>Dos rasters alinhados aos resultados anuais.</h2>
-        <div class="step-grid product-steps">
-          <article><span>01</span><h2>Inclua os dados</h2><p>Selecione rasters GeoTIFF de cobertura da terra e elevação com a mesma extensão, resolução e sistema de coordenadas.</p></article>
-          <article><span>02</span><h2>Mapeie as classes</h2><p>Associe cada categoria de origem a um estado do modelo ou exclua-a do cenário.</p></article>
-          <article><span>03</span><h2>Escolha a forçante</h2><p>Defina os anos e use uma taxa constante ou uma trajetória do nível do mar por calendário.</p></article>
-          <article><span>04</span><h2>Execute e examine</h2><p>Compare mapas e tabelas anuais e mantenha os metadados junto aos resultados.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="outputs">
-      <div class="container split product-output">
-        <div>
-          <p class="eyebrow">Fluxo de pesquisa</p>
-          <h2>Guarde dados e resultados juntos.</h2>
-          <p>Cada execução usa as entradas fornecidas pelo usuário e salva as saídas na pasta do projeto. Os rasters originais permanecem inalterados.</p>
-          <a class="text-link" href="guide.html#results">Veja os arquivos de saída →</a>
-        </div>
-        <ul class="output-list">
-          <li><strong>Mapas anuais dos estados</strong><span>Arquivos GeoTIFF dos anos simulados</span></li>
-          <li><strong>Trajetórias e transições</strong><span>Tabelas que resumem as mudanças ao longo do tempo</span></li>
-          <li><strong>Metadados da execução</strong><span>Entradas, parâmetros, tempo de processamento e registros de recursos</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section tinted" id="resources">
-      <div class="container">
-        <p class="eyebrow">Saiba mais</p>
-        <h2>Encontre a informação para o próximo passo.</h2>
-        <div class="resource-grid">
-          <a class="resource-card" href="guide.html"><span>Documentação</span><strong>Prepare as entradas e execute um cenário</strong><small>Fluxo de trabalho, rasters aceitos e opções de processamento</small><b aria-hidden="true">→</b></a>
-          <a class="resource-card" href="sea-level-trajectories.html"><span>Dados de nível do mar</span><strong>Prepare um CSV de trajetória</strong><small>Colunas, unidades e fontes de projeções</small><b aria-hidden="true">→</b></a>
-          <a class="resource-card" href="benchmarks.html"><span>Métodos e evidências</span><strong>Consulte as execuções registradas</strong><small>Benchmarks e limites de interpretação</small><b aria-hidden="true">→</b></a>
-        </div>
-        <p class="research-note">A base científica do modelo e a forma de citar o software estão na página de <a href="articles.html">pesquisa e citação</a> e no <a href="https://github.com/oceanpep/br-mangue-studio">repositório do código-fonte</a>.</p>
-      </div>
-    </section>
-
-    <section class="final-cta">
-      <div class="container final-cta-wrap">
-        <div><p class="eyebrow">Gratuito e de código aberto</p><h2>Comece com o BR-MANGUE Studio.</h2><p>Escolha o pacote para o seu sistema operacional e confira os requisitos.</p></div>
-        <a class="button primary" href="downloads.html">Obter a versão 1.4.8</a>
-      </div>
-    </section>
+    </div></section>
   </main>
-  <footer class="site-footer"><div class="container footer-wrap"><span>BR-MANGUE Studio · Software de pesquisa do GEOTAM, UFMA</span><span><a href="guide.html">Documentação</a> · <a href="downloads.html">Downloads</a> · <a href="https://github.com/oceanpep/br-mangue-studio">Código-fonte</a> · <a href="https://doi.org/10.5281/zenodo.23509308">Citação</a></span></div></footer>
+  <footer class="site-footer"><div class="container footer-wrap"><span>BR-MANGUE Studio · Software de pesquisa do GEOTAM, UFMA</span><span><a href="https://github.com/oceanpep/br-mangue-studio/blob/main/docs/MODEL_DOCUMENTATION_PT.md" target="_blank" rel="noopener">Documentação</a> · <a href="downloads.html">Downloads</a> · <a href="https://github.com/oceanpep/br-mangue-studio">Código-fonte</a> · <a href="https://doi.org/10.5281/zenodo.23509308">Citação</a></span></div></footer>
 </body>
 </html>
